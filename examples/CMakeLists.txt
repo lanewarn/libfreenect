@@ -4,9 +4,11 @@
 
 # These examples have no external dependencies and should always build.
 add_executable(freenect-camtest camtest.c)
+add_executable(freenect-flashfirmware flash_firmware.c)
 add_executable(freenect-wavrecord wavrecord.c)
 target_link_libraries(freenect-camtest freenect)
 target_link_libraries(freenect-wavrecord freenect)
+target_link_libraries(freenect-flashfirmware freenect)
 install(TARGETS freenect-camtest freenect-wavrecord
         DESTINATION bin)
 
